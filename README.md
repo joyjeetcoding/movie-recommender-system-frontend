@@ -1,28 +1,47 @@
-# 🎬 Movie Recommendation System - Frontend
+# 🎬 Movie Recommendation System Frontend
 
-This repository contains the frontend implementation for the **[Movie Recommendation System](https://github.com/joyjeetcoding/movie-recommender-system?tab=readme-ov-file)** using **Streamlit**.
+This repository contains the **frontend** for the [Movie Recommendation System](https://github.com/joyjeetcoding/movie-recommender-system?tab=readme-ov-file) built using **Streamlit**.
 
-⚠️ **Note:** The `.pkl` files are not included in this repository due to their large size (~187 MB). Please download them from the backend repository and place them in the appropriate directory.
+## ⚠️ Important Note
+The `.pkl` files required for the recommendation system are not included in this repository due to their large size (~187 MB). You must generate these files by executing the `pickle.dump` command in the backend and copy them to this project.
 
 ## 📥 Setup Instructions
 
-1️⃣ **Copy & Paste Pickle Files**
-- After executing the `pickle.dump` command in the backend, copy the generated `.pkl` files from the **Movie Recommendation System** backend.
-- Paste them into this frontend project directory.
+### 1️⃣ Create a Virtual Environment
+It is recommended to run the application in a **virtual environment** to avoid dependency conflicts.
 
-2️⃣ **Load Pickle Files**
-- Ensure that the pickle files are correctly loaded in the frontend application for recommendations.
+```bash
+# Create a virtual environment
+python -m venv venv
 
-3️⃣ **Create the Frontend using Streamlit**
-- Build an interactive UI using **Streamlit**.
-- Display recommended movies based on user input.
+# Activate the virtual environment
+# On macOS/Linux
+source venv/bin/activate
 
-4️⃣ **Implement the `recommend` Function**
-- Create a function `recommend(movie_name)` to return **5 similar movies** based on the model.
+# On Windows
+venv\Scripts\activate
+```
 
-## 🚀 Running the Application
-Run the following command in the terminal:
+### 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Copy & Paste Pickle Files
+- Run the backend script to generate the `.pkl` files.
+- Copy these files from the **backend project** and place them in the appropriate directory in this frontend project.
+
+### 4️⃣ Run the Streamlit Application
 ```bash
 streamlit run app.py
 ```
-This will launch the Streamlit web application.
+This will launch the frontend UI for movie recommendations.
+
+## 🎯 Features
+- Load **precomputed movie similarity data** from `.pkl` files.
+- Provide **movie recommendations** based on user input.
+- Simple and interactive UI built using **Streamlit**.
+
+---
+
+🚀 **Happy Coding!**
